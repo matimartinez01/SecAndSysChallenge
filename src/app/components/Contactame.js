@@ -56,12 +56,6 @@ const handleEnviar = (event) => {
   }
 }
 
-let whatsapp = "";
-if (window.innerWidth > 768) {
-  whatsapp = "https://web.whatsapp.com/send?phone=543512630360&text="
-}else{
-  whatsapp = "https://wa.me/543512630360"
-}
 
 
     return (
@@ -91,7 +85,7 @@ if (window.innerWidth > 768) {
           <div className={styles.divredes}>
             <a href="https://www.linkedin.com/in/matias-martinez-0b8b40274/" className={styles.redes} target="_blank"><FaLinkedin size={50} color="#0c184e" /></a>
             <a href="https://github.com/matimartinez01" className={styles.redes} target="_blank"><FaGithub size={50} color="#0c184e" /></a>
-            <a href={whatsapp} className={styles.redes} target="_blank"><FaWhatsapp size={50} color="#0c184e" /></a>
+            <a href="https://wa.me/543512630360" className={styles.redes} target="_blank"><FaWhatsapp size={50} color="#0c184e" /></a>
           </div>
         </div>
       </div>
