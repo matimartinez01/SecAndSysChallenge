@@ -18,11 +18,13 @@ export default function Header() {
 
    let showMenu = false;
 
-   if (window.innerWidth < 768) {
+   
+
+   if (typeof window !== 'undefined' && window.innerWidth < 768) {
       showMenu = true;
-   }else{
+  } else {
       showMenu = false;
-   }
+  }
 
    const handleScroll = (event, id) => {
       event.preventDefault();
