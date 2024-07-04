@@ -304,8 +304,7 @@
   width: 90%;
   border-radius: 0.5rem;
   border: #0c184e 2px solid;
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     width: 60%;
   }
   @media screen and (min-width: 1024px) {
