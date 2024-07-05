@@ -2,7 +2,7 @@
 import styles from "../page.module.css";
 import Image from "next/image";
 import foto from "../utils/MatiasMartinez.jpeg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hamburger from "hamburger-react";
 
 export default function Header() {
@@ -20,15 +20,14 @@ export default function Header() {
 
    
 
-   if (typeof window !== 'undefined' && window.innerWidth < 768) {
+   if (window.innerWidth < 768) {
       showMenu = true;
   } else {
       showMenu = false;
   }
 
-   const handleScroll = (event, id) => {
+      const handleScroll = (event, id) => {
       event.preventDefault();
-    
       const correccionPc = 130;
       const correccionMovil = 60;
       const correccion = window.innerWidth < 768 ? correccionMovil : correccionPc;
@@ -43,15 +42,17 @@ export default function Header() {
       });
     
       handleClose(); // Asegúrate de que handleClose esté definido
-    };
     
+    };
+      
+   
 
 
 
     return (
     <header className={styles.header}>
        <div className={styles.fotonombre}>
-       <Image src={foto} className={styles.imgheader}/>
+       <Image src={foto} className={styles.imgheader} alt="fotodeperfil"/>
        <div className={styles.divheader}>
           <h1 className={styles.h1header}>Matias Martinez</h1>
           <h2 className={styles.h2header}>Desarrollador FullStack Java</h2>
